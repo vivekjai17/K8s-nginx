@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: eks-advancewebsite.leapfinance.com
+  namespace: cert-manager
+spec:
+  secretName: eks-advancewebsite.leapfinance.com-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: eks-advancewebsite.leapfinance.com
+  dnsNames:
+  - eks-advancewebsite.leapfinance.com
+---
